@@ -23,7 +23,7 @@ import com.bridgelabz.fundoonote.user.service.IUserService;
 import com.bridgelabz.fundoonote.user.utility.UserResponse;
 
 @RestController
-@RequestMapping("/home")
+@RequestMapping("/user")
 public class UserController {
 
 	@Autowired
@@ -64,7 +64,7 @@ public class UserController {
 
 	}
 
-	@GetMapping("/getdata")
+	@GetMapping("/getUser")
 	public ResponseEntity<List<UserDto>> getList() {
 		List<UserDto> getdetails = userService.findAll();
 		return new ResponseEntity<List<UserDto>>(getdetails, HttpStatus.OK);
